@@ -22,6 +22,9 @@
             text-align: right;
     
          }
+         .main-nav-items{
+             padding-bottom: 20px;
+         }
          .main-nav-item{
              display: inline;
              padding: 10px;
@@ -41,20 +44,21 @@
              height: 70px;
              background-color: pink;
          }
-         .main-nav-item a{
+         .main-nav-item a, .main-nav-item a:active,   .main-nav-item:active::before{
              color: white;
          }
-         .main-nav-item a:hover{
+         .main-nav-item a:hover, .main-nav-item:hover::before{
              color: blue;
          }
-         .main-nav-item a:active{
-             color: white;
-         }
+      
          .main-nav-item::before{
              content: 'x';
              padding-right: 5px;
              color: white;
          }
+
+
+         
         
     </style>
 </head>
