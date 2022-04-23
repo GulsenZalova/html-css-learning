@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-line{
+            color: pink;
+        }
+
+        p::first-letter{
+            color: violet;
+            font-size: 48px;
+        }
+        ::selection{
+            background-color: blue;
+        }
+        p.about::first-line{
+            font-size: 30px;
+        }
+        p::after{
+            content: '&';
+            color: aqua;
+            font-size: large;
+        }
+        p::before{
+            content: '@';
+            color: blueviolet;
+            font-size: 50px;
+        }
+       p:last-child{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus quasi necessitatibus perspiciatis sapiente aspernatur, nostrum nisi corrupti laboriosam magni, repellat optio quaerat odit eos, earum rem quia. Voluptatum et facere, recusandae, perferendis illo consequatur soluta eaque fugit veritatis reprehenderit beatae velit molestias adipisci rerum cumque necessitatibus aspernatur. Veniam, aliquid quod?
+        </p>
+        <p class="about">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas explicabo, ducimus aliquam nisi repellat ullam. Qui dicta illum consequuntur? Iste, recusandae non? Illo odit aliquam sequi nulla a, pariatur, commodi molestiae praesentium, placeat quis dignissimos animi ducimus quos porro ad harum sed neque dolor voluptate asperiores doloribus aut! Saepe, ex? totam sequi dolor accusamus, quam unde explicabo fuga eveniet velit quis sint? Tempora amet nesciunt quo at molestiae aut?
+        </p>
+    
+        <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus tenetur iure aperiam illum voluptas minus sit, vitae numquam ullam. Neque optio ratione quia vero perspiciatis. Fugit pariatur sunt harum nostrum, beatae placeat explicabo, blanditiis quia consequatur corporis a commodi atque officiis dolorum. Obcaecati laudantium sint, incidunt laborum sequi autem odit.
+        </span>
+    </div>
+</body>
+</html>
