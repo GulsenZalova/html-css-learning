@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>İconBar</title>
+    <style>
+        .flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .İconBar{
+            flex-direction: row;
+            width: 600px;  
+        }
+        .İconBar2{
+            flex-direction: column;
+            width: 600px; 
+        }
+        .icon{
+            padding: 30px;
+            background-color: #555;
+            color: white;
+            font-size: 32px;
+            text-align: center;
+            width: 100px;
+            transition: all 0.3 ease;
+        }
+        .icon:hover {
+            background-color: #000;
+        }
+        .active{
+            background-color: #04AA6D;
+        }
+    </style>
+</head>
+<body>
+    <div class="container flex">
+        <div class="İconBar flex">
+            <a class="icon active"><i class="fa-solid fa-house"></i></a>
+            <a class="icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a class="icon"><i class="fa-solid fa-envelope"></i></a>
+            <a class="icon"><i class="fa-solid fa-earth-americas"></i></a>
+            <a class="icon"><i class="fa-solid fa-trash-can"></i></a>
+        </div>
+        <div class="İconBar2 flex">
+            <a class="icon active "><i class="fa-solid fa-house"></i></a>
+            <a class="icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a class="icon"><i class="fa-solid fa-envelope"></i></a>
+            <a class="icon"><i class="fa-solid fa-earth-americas"></i></a>
+            <a class="icon"><i class="fa-solid fa-trash-can"></i></a>
+        </div>
+    </div>
+</body>
+</html>
