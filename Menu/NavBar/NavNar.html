@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>NavBar</title>
+    <style>
+        *{
+         margin: 0px;
+         padding: 0px;
+         text-decoration: none;
+         box-sizing: border-box;
+         border: none;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content:center ;
+            align-items: flex-start;
+        }
+        .navbar{
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            background-color: #e9e9e9;
+            padding:20px 50px ;
+            justify-content: space-between;
+        }
+        .nav-link{
+            display: flex;
+            flex-direction: row;
+        }
+       
+        .nav-link a{
+            padding: 20px;
+            color: #04AA6D;
+            font-size: 20px;
+        }
+        .nav-link a:hover{
+            background-color: #04AA6D;
+            color: white;
+        }
+        .nav-link a:hover i{
+            background-color: #04AA6D;
+            color: white;
+        } 
+        .active{
+           border-bottom: 3px solid #04AA6D;
+        }
+        .nav-link i{
+            font-size: 20px;
+            color: #04AA6D;
+            margin-right: 10px;
+        }
+        .nav-search {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-search input{
+            width: 100%;
+            padding: 10px 20px;
+            font-size: 17px;
+        }
+        .nav-search i{
+            color: #04AA6D;
+            background-color: lightgray;
+            padding: 10px 10px;
+            font-size: 20px;
+        }
+        @media screen and (max-width:600px){
+            .navbar{
+                flex-direction: column;
+                height:280px ;
+            }
+            .nav-link{
+                flex-direction: column;
+            }
+              .none{
+            display: none;
+            }
+            .nav-search input{
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <nav class="navbar">
+            <div class="nav-link"> 
+                <a href="#" class="active"><i class="fa-solid fa-house none"></i>Home</a>
+                <a href="#"><i class="fa-solid fa-earth-americas none"></i>About</a>
+                <a href="#"><i class="fa-solid fa-envelope none"></i>Contact</a>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="Search...">
+                <i class="fa-solid fa-magnifying-glass none"></i>
+            </div>
+        </nav>
+    </section>
+</body>
+</html>
