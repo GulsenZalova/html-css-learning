@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoverSideNavBtn</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            border: none;
+            background-color: transparent;
+        }
+        .btns{
+            margin: 50px 0px;
+        }
+        .btn{
+            display: block;
+            margin: 15px 0px;
+            padding-right: 50px;
+            padding: 15px;
+            background-color: blue;
+            border-radius: 5px;
+            width: 110px;
+            height: 50px;
+            color: white;
+            font-size: 15px;
+            text-align: left;
+            transform: translateX(-70px);
+            transition: all 0.3s ease;
+        }
+        .btn:hover{
+            transform: translateX(0px);
+        }
+        .btn1{
+            background-color:#04AA6D;
+        }
+        .btn2{
+            background-color: #2196F3;
+        }
+        .btn3{
+            background-color: #f44336;
+        }
+        .btn4{
+            background-color:  #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="btns">
+            <button class="btn btn1">About</button>
+            <button class="btn btn2">Blog</button>
+            <button class="btn btn3">Projects</button>
+            <button class="btn btn4">Contact</button>
+        </div>
+    </div>
+</body>
+</html>
