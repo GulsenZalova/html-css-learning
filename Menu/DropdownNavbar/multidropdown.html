@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>MultiDropDown</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            box-sizing: border-box;
+        }
+        #main-nav a{
+            color: white;
+            background-color: black;
+            display:block ;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+        #main-nav a:hover{
+            background-color: #555;
+        }
+        #main-nav ul{
+            display: flex;
+        }
+        #main-nav li{
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        #main-nav li:hover .submenu > li{
+            display: block;
+        }
+        .submenu li{
+            display: none;
+            position: absolute;
+            top: 0px;
+        }
+        .submenu{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            width: 100%;
+        }
+        .submenu li{
+            position: relative;
+        }
+
+        .submenu li:hover .submenu-2 li{
+            display: block;
+        }
+        .submenu-2 li{
+            display: none;
+        }
+        .submenu-2{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0px;
+            left: 100%;
+            width: 100%;
+        }
+        .arrow{
+            margin-left: 8px ;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects <i class="fa-solid fa-caret-down arrow"></i></a>
+                <ul class="submenu">
+                    <li><a href="#">Project 1</a></li>
+                    <li><a href="#">Project 2</a></li>
+                    <li><a href="#">Project 3 <i class="fa-solid fa-caret-right arrow"></i></a>
+                        <ul class="submenu-2">
+                            <li><a href="#">Small Project</a></li>
+                            <li><a href="#">Medium Project</a></li>
+                            <li><a href="#">Large Project</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">FAQs <i class="fa-solid fa-caret-down arrow"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">FAQ 1</a></li>
+                        <li><a href="#">FAQ 2</a></li>
+                        <li><a href="#">FAQ 3 <i class="fa-solid fa-caret-right arrow"></i></a>
+                            <ul class="submenu-2">
+                                <li><a href="#">Best FAQs</a></li>
+                                <li><a href="#">Good FAQs</a></li>
+                                <li><a href="#">Bad FAQs</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+            </li>
+            <li><a href="#">Education <i class="fa-solid fa-caret-down arrow"></i></a>
+                <ul class="submenu">
+                    <li><a href="#">Education 1</a></li>
+                    <li><a href="#">Education 2</a></li>
+                    <li><a href="#">Education 3</a></li>
+                </ul>
+        </li>
+        </ul>
+    </nav>
+</body>
+</html>

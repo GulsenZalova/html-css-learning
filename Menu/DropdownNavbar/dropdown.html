@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dropdown</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+        }
+        .nav{
+            width: 100%;
+            height: 50px;
+            background-color: black;
+        }
+        .nav-list{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .nav-list-item{
+            position: relative;
+            padding:  14px;
+            font-size: 20px;
+            color: white;
+            margin-right: 15px;
+            display: flex;
+        }
+        .nav-list-item::after{
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            width: 0%;
+            height: 3px;
+            background-color:white;
+            transition: width 0.5s ease;
+            border-radius: 3px;
+        }
+        .nav-list-item:hover::after{
+            width: 80%;
+        }
+        .nav-list-item i{
+            margin-top: 5px;
+            margin-left: 10px;
+            color: white;
+            font-size: 15px;
+        }
+        .nav-list-item:hover{
+            background-color: #555;
+        }
+        .nav-list-item:hover .nav-list-item-drop{
+            display: block;
+        }
+        .nav-list-item-drop{
+            background-color: #555;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 150px;
+            align-items: left;
+            display: none;
+            box-shadow:5px 5px 5px #777 ;
+        }
+        .nav-list-item-drop li{
+            padding: 10px;
+        }
+        .nav-list-item-drop li:hover{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-list-item">Home</li>
+                <li class="nav-list-item">About</li>
+                <li class="nav-list-item">Projects<i class="fa-solid fa-caret-down"></i>
+                    <ul class="nav-list-item-drop">
+                        <li>Project 1</li>
+                        <li>Project 2</li>
+                        <li>Project 3</li>
+                    </ul>
+                </li>
+                <li class="nav-list-item">Education
+                    <i class="fa-solid fa-caret-down"></i>
+                    <ul class="nav-list-item-drop">
+                        <li>Edu 1</li>
+                        <li>Edu 2</li>
+                        <li>Edu 3</li>
+                    </ul>
+                </li>
+                <li class="nav-list-item">Contact</li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

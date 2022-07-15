@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dropdown Navbar</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+        }
+        .nav{
+            display: flex;
+            background-color: black;
+            width: 100%;
+            height: 50px;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .nav a{
+            /* margin-right: 30px; */
+            font-size: 20px;
+            color: white;
+            padding: 14px 16px;
+        }
+        .nav a:hover{
+            background-color: #333;
+            color: white;
+        }
+        .dropdown{
+            position: relative;
+        }
+        .dropmenu{
+        display: none;
+        background-color: #f9f9f9;
+        position: absolute;
+        top: 49px;
+        min-width: 160px;
+        transition: all .5s ease;
+        box-shadow: 10px 10px 10px lavender;
+        z-index: 1;
+        }
+        .dropdown:hover .dropbtn{
+            background: #333;
+        }
+        .dropbtn{
+            font-size: 17px;    
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            margin-right: 30px;
+        }           
+        .dropmenu a{
+            padding:14px 16px;
+            display: block;
+            text-align: left;
+            color: #333;
+        }
+        .dropdown a i{
+            font-size: 20px;
+        }
+        .dropdown:hover .dropmenu{
+            display: block;
+        }
+        .active{
+            background-color: #04AA6D;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <a class="active" href="#">Home</a>
+            <a href="#">News</a>
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown <i class="fa-solid fa-caret-down"></i></button>
+                <div class="dropmenu">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <a href="">Address</a>
+        </nav>
+
+    </div>
+</body>
+</html>
