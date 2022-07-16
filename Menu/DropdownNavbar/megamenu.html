@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaMenu</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+        }
+        .nav ul{
+            display: flex;
+        }
+        .nav a{
+            background-color: black;
+            color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            font-size: 18px;
+        }
+        .nav a:hover{
+            background-color: #333;
+        }
+        .nav li{
+            width: 100%;
+            position: relative;
+        }
+        .nav li:hover  .supdrop li{
+            display: block;
+        }
+        .supdrop li{
+            display: none;
+            position: absolute;
+            top: 0;
+        }
+        .supdrop{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+       
+        .supdrop li{
+            position: relative;
+        }
+        .supdrop li:hover .supdrop-2 li{
+            display: block;
+        }
+        .supdrop-2 li{
+            display: none;
+        }
+        .supdrop-2{
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Project</a>
+                 <ul class="supdrop">
+                    <li><a href="#">Pro 1</a></li>
+                    <li><a href="#">Pro 2</a></li>
+                    <li><a href="#">Pro 3</a>
+                        <ul class="supdrop-2">
+                            <li><a href="#">Pro 4</a></li>
+                            <li><a href="#">Pro 5</a></li>
+                            <li><a href="#">Pro 6</a></li>
+                        </ul>
+                    </li>
+                 </ul>
+                </li>
+                <li><a href="#">FAQs</a>
+                    <ul class="supdrop">
+                        <li><a href="#">FAQs 1</a></li>
+                        <li><a href="#">FAQs 2</a></li>
+                        <li><a href="#">FAQs 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

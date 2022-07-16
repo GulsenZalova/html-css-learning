@@ -29,7 +29,6 @@
             align-items: center;
         }
         .nav a{
-            /* margin-right: 30px; */
             font-size: 20px;
             color: white;
             padding: 14px 16px;
@@ -46,10 +45,12 @@
         background-color: #f9f9f9;
         position: absolute;
         top: 49px;
-        min-width: 160px;
+        min-width: 950px;
+        min-height: 200px;
         transition: all .5s ease;
         box-shadow: 10px 10px 10px lavender;
         z-index: 1;
+        padding: 15px;
         }
         .dropdown:hover .dropbtn{
             background: #333;
@@ -71,10 +72,25 @@
             font-size: 20px;
         }
         .dropdown:hover .dropmenu{
-            display: block;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
         }
         .active{
             background-color: #04AA6D;
+        }
+        .image img{
+            border-radius: 5px;
+            width: 200px;
+            height:200px;
+            margin-top: 20px;
+            align-items: center;
+        }
+         h1{
+            color: red;
+            margin-top: 10px;
+            align-items: center;
+            text-align: center;
         }
     </style>
 </head>
@@ -85,11 +101,48 @@
             <a href="#">News</a>
             <div class="dropdown">
                 <button class="dropbtn">Dropdown <i class="fa-solid fa-caret-down"></i></button>
-                <div class="dropmenu">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
+                <ul class="dropmenu">
+                    <li class="image">
+                        <h1>Natura</h1>
+                        <img src="https://i.pinimg.com/550x/94/fb/9e/94fb9e94f0db7e3d429df2d9c64527d2.jpg" alt="">
+                    </li>
+                    <li>
+                       <h1>Bir Sütun</h1>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </li>
+                    <li>
+                        <h1>İki sütun</h1>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </li>
+                    <li>
+                        <h1>3 Sütun</h1>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </li>
+                    <li>
+                        <h1>4 Sütun</h1>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </li>
+                    <li class="image">
+                        <h1>Natura</h1>
+                        <img src="https://i.pinimg.com/550x/94/fb/9e/94fb9e94f0db7e3d429df2d9c64527d2.jpg" alt="">
+                    </li>
+                </ul>
             </div>
             <a href="">Address</a>
         </nav>
